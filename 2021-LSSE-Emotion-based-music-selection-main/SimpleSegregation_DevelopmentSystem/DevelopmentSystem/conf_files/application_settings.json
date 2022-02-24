@@ -1,0 +1,8 @@
+{"manual_testing": false,
+  "manual_testing_started": false,
+  "rest_addr": "http://127.0.0.1:5000",
+  "network_server_addr": "http://127.0.0.1:5005",
+  "auto_testing_max_iter": 500,
+  "curve_flat": 0.7,
+  "validation_threshold": 0.8,
+  "test_threshold": 0.9}

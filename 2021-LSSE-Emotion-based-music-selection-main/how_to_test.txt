@@ -1,0 +1,36 @@
+DEVELOPMENT:
+- Ingestion: Set number of Input Sessions - RUN main.py
+- PORT:5004
+
+- Preparation: Set json param to "Development" mode - RUN rest_api.py
+- PORT:5002
+
+- Segregation/Development: RUN rest_api.py
+- PORT:5000
+
+- Execution: RUN execution.py
+- PORT:5005
+
+- Test: Set number of Classifier to be generated
+	Set number of System Run to collect
+	RUN api.py (time counting server, mode 0) PORT: 5009
+ 	RUN test.py 1
+
+MONITORING:
+- Ingestion: RUN main.py
+- PORT: 5004
+
+- Preparation: Change json param not to "Development" - RUN rest_api.py
+- PORT: 5002
+
+- Execution: Set number of Monitoring Sessions / Set re-run interval (zero means only one monitoring session)
+	     RUN execution.py
+- PORT: 5005
+
+- Monitoring: Set number of Monitoring Sessions - RUN monitoring.py
+- PORT: 5006
+
+- Test: Set number of Sessions to be sent
+	RUN api.py (time counting server, mode 1) PORT: 5009
+ 	Set number of Monitoring Sessions - RUN test.py 2
+	Must reset Execution for test re-run if interval is zero

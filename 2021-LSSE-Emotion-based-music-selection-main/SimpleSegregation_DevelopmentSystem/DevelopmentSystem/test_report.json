@@ -1,0 +1,1 @@
+{"params": {"activation": "logistic", "hidden_layer_sizes": 120, "max_iter": 400, "random_state": 1}, "validation_error": 0.6666666666666667, "training_error": 0.4320987654320988, "testing_error": 0.65}
